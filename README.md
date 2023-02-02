@@ -1,4 +1,13 @@
-<!-- TABLE OF CONTENTS -->
+<a name="readme-top"></a>
+
+<div align="center">
+
+  <img src="./murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
 
 # 📗 Table of Contents
 
@@ -22,7 +31,7 @@
 
 # 📖 School Library <a name="about-project"></a>
 
-Implementation of a classes and objects with encapsulation and inheritance in Ruby for a School Library.
+Implementation of a classes and objects with encapsulation and inheritance in Ruby for a School Library that formats inputs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
