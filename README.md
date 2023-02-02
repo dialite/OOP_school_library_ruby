@@ -31,7 +31,7 @@
 
 # 📖 School Library <a name="about-project"></a>
 
-Implementation of a classes and objects with encapsulation and inheritance in Ruby for a School Library.
+Implementation of a classes and objects with encapsulation and inheritance in Ruby for a School Library that formats inputs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
