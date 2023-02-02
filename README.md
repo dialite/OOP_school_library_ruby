@@ -22,12 +22,7 @@
 
 # 📖 School Library <a name="about-project"></a>
 
-Implementation of a subset of the [Enumerable](https://ruby-doc.org/core-3.0.0/Enumerable.html) class in Ruby.
-Mehtods currently implemented:
-
-- [#all?](https://ruby-doc.org/core-3.0.0/Enumerable.html#method-i-all-3F)
-- [#any?](https://ruby-doc.org/core-3.0.0/Enumerable.html#method-i-any-3F)
-- [#filter](https://ruby-doc.org/core-3.0.0/Enumerable.html#method-i-filter)
+Implementation of a classes and objects with encapsulation and inheritance in Ruby for a School Library.
 
 ## 🛠 Built With <a name="built-with"></a>
 
