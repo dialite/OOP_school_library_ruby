@@ -4,7 +4,7 @@ class Rental
 
   def initialize(date, book, person)
     @date = date
-    
+
     @book = book
     book.rentals.push(self)
 
