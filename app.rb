@@ -11,6 +11,7 @@ class App
     @people = []
     @books = []
     @rentals = []
+    @class = Classroom.new('Grade 9')
   end
 
   def list_all_books
@@ -53,10 +54,7 @@ class App
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
 
-    print 'Classroom: '
-    classroom = gets.chomp
-
-    student = Student.new(age, classroom, name, parent_permission)
+    student = Student.new(age, @class, name, parent_permission)
     @people.push(student)
 
     puts 'Student created successfully'
