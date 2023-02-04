@@ -4,7 +4,7 @@ class MenuClass
   def initialize
     @app = App.new(self)
     puts 'Welcome to School Library!'
-    display_menu
+    exit
   end
 
   def display_menu
