@@ -20,7 +20,7 @@ class App
       option = gets.chomp
       break if option == '7'
 
-      get_num(option)
+      get_num option
     end
     puts 'Thank you for using our Library!'
   end
@@ -55,4 +55,10 @@ class App
     end
   end
 
+  def list_all_books
+    puts 'There are no books yet! Kindly add books.' if @books.empty?
+
+    @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}"}
+    sleep 0.75
+  end
 end
