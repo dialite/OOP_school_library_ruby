@@ -19,7 +19,7 @@ class MenuClass
     user_input = gets.chomp
     select_option(user_input)
   end
-  
+
   def select_option(user_input)
     menu_list = {
       '1' => :list_all_books,
