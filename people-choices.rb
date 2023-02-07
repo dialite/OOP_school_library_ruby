@@ -2,7 +2,7 @@ require './student'
 require './teacher'
 
 class PeopleChoices
-    attr_reader :people
+    attr_accessor :people
 
     def initialize
         @people = []
@@ -10,9 +10,10 @@ class PeopleChoices
 
     def list_all_people
         puts 'There are no people yet! Kindly add a student or teacher.' if @people.empty?
-        @people.map { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+        @people.each_with_index do |person, index|
+            puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+        end
         sleep 0.75
-        @menu.display_menu
     end
 
     def create_person
@@ -27,7 +28,6 @@ class PeopleChoices
         else
           puts 'Invalid input. kindly type 1 or 2'
         end
-        @menu.display_menu
     end
 
     def create_student
