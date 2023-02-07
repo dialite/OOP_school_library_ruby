@@ -1,4 +1,4 @@
-require './book'
+require './books-choices'
 require './person'
 require './rental'
 require './student'
@@ -9,18 +9,11 @@ class App
   def initialize(menu)
     @menu = menu
     @people = []
-    @books = []
     @rentals = []
     @class = Classroom.new('Grade 9')
   end
 
-  def list_all_books
-    puts 'There are no books yet! Kindly add books.' if @books.empty?
-
-    @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
-    sleep 0.75
-    @menu.display_menu
-  end
+  
 
   def list_all_people
     puts 'There are no people yet! Kindly add a student or teacher.' if @people.empty?
@@ -78,20 +71,7 @@ class App
     sleep 0.75
   end
 
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
-
-    book = Book.new(title, author)
-    @books << book
-
-    puts 'Book added successfully'
-    sleep 0.75
-    @menu.display_menu
-  end
+  
 
   def create_rental
     puts 'Select a book from the following list by number'
