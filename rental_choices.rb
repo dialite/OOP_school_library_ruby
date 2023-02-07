@@ -24,7 +24,6 @@ class RentalChoices
 
     @rentals.push(Rental.new(date, @books_choices.books[book_id], @people_choices.people[person_id]))
 
-
     puts 'Rental created successfully'
     sleep 0.75
   end
