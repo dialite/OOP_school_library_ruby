@@ -3,10 +3,12 @@ require_relative('person')
 class Student < Person
   attr_accessor :classroom
 
-  def initialize(age, classroom, name = 'unknown', parent_permission: true)
+  # rubocop:disable Style/OptionalBooleanParameter
+  def initialize(age, classroom, name = 'unknown', parent_permission = true)
     super(age, name, parent_permission)
     @classroom = classroom
   end
+  # rubocop:enable Style/OptionalBooleanParameter
 
   def add_classroom(classroom)
     @classroom = classroom
