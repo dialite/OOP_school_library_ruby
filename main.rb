@@ -21,7 +21,7 @@ class MenuClass
       puts 'bye, thanks for using the app'
       exit(true)
     else
-    @app.select_option(user_input)
+      @app.select_option(user_input)
     end
   end
 end

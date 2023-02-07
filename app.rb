@@ -1,6 +1,6 @@
-require './books-choices'
-require './people-choices'
-require './rental-choices'
+require './books_choices'
+require './people_choices'
+require './rental_choices'
 require './classroom'
 
 class App
@@ -29,8 +29,6 @@ class App
     else
       puts 'Invalid option'
     end
-      @menu.display_menu
+    @menu.display_menu
   end
-    
 end
-
