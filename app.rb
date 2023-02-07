@@ -1,7 +1,7 @@
-require './books_choices'
-require './people_choices'
-require './rental_choices'
-require './classroom'
+require_relative './books_choices'
+require_relative './people_choices'
+require_relative './rental_choices'
+require_relative './classroom'
 
 class App
   def initialize(menu)

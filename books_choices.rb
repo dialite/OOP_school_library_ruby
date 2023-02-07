@@ -1,4 +1,4 @@
-require './book'
+require_relative './book'
 
 class BooksChoices
   attr_accessor :books
