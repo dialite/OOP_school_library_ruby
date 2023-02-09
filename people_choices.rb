@@ -8,12 +8,17 @@ class PeopleChoices
     @people = []
   end
 
+  def get_person_id(person_number)
+    @people[person_number].id
+  end
+
   def list_all_people
-    puts 'There are no people yet! Kindly add a student or teacher.' if @people.empty?
-    @people.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    if @people.empty?
+      puts 'There are no people yet! Kindly add a student or teacher.'
+    else
+      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+      sleep 0.75
     end
-    sleep 0.75
   end
 
   def create_person
@@ -40,7 +45,7 @@ class PeopleChoices
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
 
-    student = Student.new(age, @class, name, parent_permission)
+    student = Student.new(nil, age, @class, name, parent_permission)
     @people.push(student)
 
     puts 'Student created successfully'

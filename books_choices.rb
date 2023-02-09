@@ -1,4 +1,5 @@
 require_relative './book'
+require 'json'
 
 class BooksChoices
   attr_accessor :books
