@@ -13,6 +13,7 @@ class Person < Nameable
     @parent_permission = parent_permission
     @rentals = []
     return unless @id.nil?
+
     @id = Random.rand(1..1000)
   end
   # rubocop:enable Style/OptionalBooleanParameter

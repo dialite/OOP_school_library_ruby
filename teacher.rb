@@ -19,7 +19,7 @@ class Teacher < Person
       'name' => @name,
       'specialization' => @specialization,
       'parent_permission' => @parent_permission,
-      'id' => @id,
+      'id' => @id
     }.to_json(*args)
   end
 

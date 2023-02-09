@@ -28,5 +28,4 @@ class BooksChoices
     @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
     sleep 0.75
   end
-
 end

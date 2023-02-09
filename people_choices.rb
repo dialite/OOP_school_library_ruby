@@ -6,7 +6,7 @@ class PeopleChoices
   attr_accessor :people
 
   def initialize
-    @people = []    
+    @people = []
   end
 
   def get_person_id(person_number)
@@ -14,11 +14,11 @@ class PeopleChoices
   end
 
   def list_all_people
-    if @people.empty? 
-      puts 'There are no people yet! Kindly add a student or teacher.' 
+    if @people.empty?
+      puts 'There are no people yet! Kindly add a student or teacher.'
     else
-    @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
-    sleep 0.75
+      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+      sleep 0.75
     end
   end
 

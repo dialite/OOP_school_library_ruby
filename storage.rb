@@ -10,6 +10,5 @@ class Storage
 
     file_data = File.read("#{class_name}.json")
     JSON.parse(file_data, create_additions: true)
-    
   end
 end
