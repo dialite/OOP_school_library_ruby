@@ -22,7 +22,7 @@ class Book
     }.to_json(*args)
   end
 
-  def self.create_json(object)
+  def self.json_create(object)
     new(object['title'], object['author'])
   end
 end

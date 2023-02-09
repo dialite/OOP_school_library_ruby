@@ -10,14 +10,14 @@ class PeopleChoices
   end
 
   def get_person_id(person_number)
-    @people[person_number]['id']
+    @people[person_number].id
   end
 
   def list_all_people
     if @people.empty? 
       puts 'There are no people yet! Kindly add a student or teacher.' 
     else
-    @people.each { |person| puts "[#{person.class}] Name: #{person['name']}, ID: #{person['id']}, Age: #{person['age']}" }
+    @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
     sleep 0.75
     end
   end
@@ -63,7 +63,7 @@ class PeopleChoices
     print 'Specialization: '
     specialization = gets.chomp
 
-    teacher = Teacher.new(nil, age, specialization, name)
+    teacher = Teacher.new(age, specialization, name)
     @people << teacher
 
     puts 'Teacher created successfully'

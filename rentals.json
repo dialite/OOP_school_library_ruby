@@ -1,1 +1,1 @@
-[{"json_class":"Rental","date":"65","book":null,"person":null,"id":930}]
+[{"json_class":"Rental","date":"343-34-3433","book":{"json_class":"Book","title":"js","author":"zia"},"person":{"json_class":"Student","classroom":null,"age":23,"name":560,"parent_permission":299,"id":189},"id":299},{"json_class":"Rental","date":"23-232-232","book":{"json_class":"Book","title":"js","author":"zia"},"person":{"json_class":"Student","classroom":null,"age":23,"name":560,"parent_permission":299,"id":142},"id":142}]

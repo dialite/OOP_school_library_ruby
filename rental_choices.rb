@@ -36,7 +36,7 @@ class RentalChoices
 
     puts 'Rentals:'
     @rentals.each do |rental|
-      puts "Date: #{rental.date}, Book '#{rental['book'].title}' by #{rental['book'].author}" if rental['person']['id'] == id
+      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
     end
     sleep 0.75
   end

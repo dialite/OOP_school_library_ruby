@@ -3,8 +3,8 @@ require_relative 'person'
 class Teacher < Person
   attr_accessor :specialization, :id
 
-  def initialize(id, age, specialization, name = 'Unknown', parent_permission: true)
-    super(id, age, name, parent_permission)
+  def initialize(age, specialization, name = 'Unknown')
+    super(age, name)
     @specialization = specialization
   end
 
@@ -23,7 +23,7 @@ class Teacher < Person
     }.to_json(*args)
   end
 
-  def self.create_json(object)
-    new(object['age'], object['name'], object['specialization'], object['parent_permission'], object['id'])
+  def self.json_create(object)
+    new(object['age'], object['name'], object['specialization'])
   end
 end
