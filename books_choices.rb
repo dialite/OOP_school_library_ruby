@@ -1,4 +1,5 @@
 require_relative './book'
+require 'json'
 
 class BooksChoices
   attr_accessor :books
@@ -24,7 +25,8 @@ class BooksChoices
   def list_all_books
     puts 'There are no books yet! Kindly add books.' if @books.empty?
 
-    @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+    @books.each_with_index { |book, index| puts "#{index}) Title: #{book['title']}, Author: #{book['author']}" }
     sleep 0.75
   end
+
 end

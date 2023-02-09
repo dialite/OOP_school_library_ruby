@@ -1,3 +1,4 @@
+require 'pry'
 require_relative './rental'
 
 class RentalChoices
@@ -17,12 +18,13 @@ class RentalChoices
     puts 'Select a person from the following list by number (not id)'
     @people_choices.list_all_people
 
-    person_id = gets.chomp.to_i
+    person_number = gets.chomp.to_i
+    people_id = @people_choices.get_person_id(person_number)
 
     print 'Date: '
     date = gets.chomp.to_s
 
-    @rentals.push(Rental.new(date, @books_choices.books[book_id], @people_choices.people[person_id]))
+    @rentals.push(Rental.new(date, @books_choices.books[book_id], @people_choices.people[person_number], people_id))
 
     puts 'Rental created successfully'
     sleep 0.75
@@ -34,7 +36,7 @@ class RentalChoices
 
     puts 'Rentals:'
     @rentals.each do |rental|
-      puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
+      puts "Date: #{rental.date}, Book '#{rental['book'].title}' by #{rental['book'].author}" if rental['person']['id'] == id
     end
     sleep 0.75
   end
