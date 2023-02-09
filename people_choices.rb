@@ -1,7 +1,6 @@
 require_relative './student'
 require_relative './teacher'
 
-
 class PeopleChoices
   attr_accessor :people
 
