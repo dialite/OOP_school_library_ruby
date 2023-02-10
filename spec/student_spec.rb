@@ -20,5 +20,12 @@ describe Student do
     it "Add classroom 'grade 5'" do
       expect(student.classroom).to eql 'grade 5'
     end
+
+    it 'Create json from Student object' do
+      student_json = student.to_json
+      # rubocop:disable Layout/LineLength
+      expect(student_json).to eql '{"json_class":"Student","classroom":"grade 5","age":22,"name":"James Brown","parent_permission":true}'
+      # rubocop:enable Layout/LineLength
+    end
   end
 end

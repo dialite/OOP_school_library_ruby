@@ -20,7 +20,7 @@ describe Person do
       expect(@person.can_use_services?).to eql true
     end
 
-    it "When parent permission is false and below age" do
+    it 'When parent permission is false and below age' do
       expect(@person1.can_use_services?).to eql false
     end
 

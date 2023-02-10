@@ -13,7 +13,7 @@ describe Classroom do
     it 'Should create a classroom' do
       expect(classroom.label).to eq 'PostGate'
     end
-   
+
     it 'Add Student should add object into students array be of length 1' do
       classroom.add_student(student)
       expect(classroom.students.length).to eql 1

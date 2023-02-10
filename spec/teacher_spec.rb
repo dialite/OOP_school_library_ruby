@@ -17,9 +17,11 @@ describe Teacher do
       expect(teacher.specialization).to eq 'Math'
     end
 
-    it 'Create json from Book object' do
+    it 'Create json from Teacher object' do
       teacher_json = teacher.to_json
+      # rubocop:disable Layout/LineLength
       expect(teacher_json).to eql '{"json_class":"Teacher","age":22,"name":"unknown","specialization":"Math","parent_permission":true,"id":"unknown"}'
+      # rubocop:enable Layout/LineLength
     end
   end
 end

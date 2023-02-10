@@ -8,7 +8,7 @@ describe Book do
   context 'When providing book information' do
     book = Book.new('Lord of the Ring', 'Richard Benson')
     student = Student.new 11, 'class1', 17, 'John', 'n'
-    rental = Rental.new '10-11-2020', book, student, 05
+    rental = Rental.new '10-11-2020', book, student, 0o5
 
     it 'create a book with title Lord of the Ring' do
       expect(book).to be_an_instance_of Book
@@ -31,6 +31,5 @@ describe Book do
       book_json = book.to_json
       expect(book_json).to eql '{"json_class":"Book","title":"Lord of the Ring","author":"Richard Benson"}'
     end
-  
   end
 end
