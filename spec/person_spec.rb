@@ -28,7 +28,7 @@ describe Person do
       expect(@person.name).to eql 'Kennedy'
     end
 
-    it 'Add Rental should add object into rentals array be of length 1' do
+    it 'Add Rental should add object into rentals array by a length of one' do
       @person.add_rental(@rental)
       expect(@person.rentals.length).to eql 1
     end
