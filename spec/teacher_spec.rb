@@ -1,4 +1,5 @@
 require_relative '../teacher'
+require 'json'
 
 describe Teacher do
   context 'When providing teacher information' do
@@ -16,8 +17,9 @@ describe Teacher do
       expect(teacher.specialization).to eq 'Math'
     end
 
-    it 'name of Teacher should be unknown' do
-      expect(teacher.name).to eq 'unknown'
+    it 'Create json from Book object' do
+      teacher_json = teacher.to_json
+      expect(teacher_json).to eql '{"json_class":"Teacher","age":22,"name":"unknown","specialization":"Math","parent_permission":true,"id":"unknown"}'
     end
   end
 end

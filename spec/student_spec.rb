@@ -16,5 +16,9 @@ describe Student do
     it 'name of student should be James Brown' do
       expect(student.name).to eq 'James Brown'
     end
+
+    it "Add classroom 'grade 5'" do
+      expect(student.classroom).to eql 'grade 5'
+    end
   end
 end
