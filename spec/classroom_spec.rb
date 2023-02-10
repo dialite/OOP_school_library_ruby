@@ -5,8 +5,8 @@ describe Classroom do
     classroom = Classroom.new('PostGate')
 
     it 'create a new Classroom' do
-        expect(classroom ).to be_an_instance_of Classroom
-      end
+      expect(classroom).to be_an_instance_of Classroom
+    end
 
     it 'Should create a classroom' do
       expect(classroom.label).to eq 'PostGate'

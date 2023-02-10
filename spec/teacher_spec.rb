@@ -9,11 +9,11 @@ describe Teacher do
     end
 
     it 'age of Teacher should be 22' do
-        expect(teacher.age).to eq 22
+      expect(teacher.age).to eq 22
     end
 
     it 'specialization of Teacher should be Math' do
-        expect(teacher.specialization).to eq 'Math'
+      expect(teacher.specialization).to eq 'Math'
     end
 
     it 'name of Teacher should be unknown' do
