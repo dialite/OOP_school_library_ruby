@@ -3,7 +3,6 @@ require_relative '../student'
 require_relative '../rental'
 require 'json'
 
-
 describe Book do
   context 'When providing book information' do
     book = Book.new('Lord of the Ring', 'Richard Benson')
