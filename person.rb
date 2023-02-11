@@ -34,7 +34,7 @@ class Person < Nameable
     of_age? || @parent_permission
   end
 
-  def add_rental(date, book)
-    Rental.new(date, book, self)
+  def add_rental(rental)
+    @rentals << rental unless @rentals.include?(rental)
   end
 end
